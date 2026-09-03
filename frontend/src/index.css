@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { -webkit-font-smoothing: antialiased; }
+
+body { background: #0A0A0A; }
+
+::selection { background: #D7FF3F; color: #0A0A0A; }
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-ticker { animation: ticker 22s linear infinite; }
+
+.focus-ring:focus-visible {
+  outline: 2px solid #D7FF3F;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-ticker { animation: none; }
+}
