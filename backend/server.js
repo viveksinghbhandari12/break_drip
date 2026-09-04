@@ -44,6 +44,11 @@ app.use((err, req, res, next) => {
   console.error(err);
   res.status(500).json({ error: 'Internal server error' });
 });
+console.log("DB_HOST:", process.env.DB_HOST);
+console.log("DB_PORT:", process.env.DB_PORT);
+console.log("DB_USER:", process.env.DB_USER);
+console.log("DB_NAME:", process.env.DB_NAME);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`BREAK & DRIP API running on port ${PORT}`));
+
