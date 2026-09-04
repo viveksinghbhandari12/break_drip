@@ -1,4 +1,5 @@
 require('dotenv').config();
+console.log('CORS will allow origin:', JSON.stringify(process.env.CLIENT_URL));
 const express = require('express');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
